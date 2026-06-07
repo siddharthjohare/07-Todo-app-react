@@ -1,16 +1,29 @@
-# React + Vite
+# 📝 State-Driven React Todo Engine (Custom Router Simulation)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade, highly architectural productivity pipeline built using React.js and Vite. Rather than leaning on external routing dependencies, this system engineers a high-performance view-switching engine using core declarative functional states. It fully encapsulates a comprehensive CRUD system synchronized with the browser's persistent caching layer and dynamic array predicate filters.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🚀 Live Deployment
+👉 **[Click Here to View Live Todo Engine Dashboard](https://07-todo-app-react.vercel.app/)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎮 Architecture & State-Routing Blueprint
 
-## Expanding the ESLint configuration
+The codebase operates as a micro single-page system by executing dynamic layout tree updates based on central route string parameters:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+                        [App.jsx (Core Orchestrator)]
+            Tracks Unified [todos] Matrix & [view] String State
+                                     |
+           -----------------------------------------------------
+          ↓                                                     ↓
+   [Navigation.jsx]                                      [Main Render Pod]
+(Switches Active View Link)                                      |
+                                              -----------------------------------
+                                             ↓                                   ↓
+                                     view === "form"                     view === "list"
+                                    [TodoForm.jsx]                      [TodoList.jsx]
+                              Handles Add / Edit Injections       Processes Filter Toggles, Maps
+                                                                   Items & Mass Purge Mutators
